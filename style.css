@@ -283,7 +283,7 @@ body {
     background-color: #fafafa;
     color: #4d1717;
     padding-left: 10px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     border-color: #733e24;
   }
 

@@ -1,5 +1,3 @@
-// alternating words
-
 const words = [
   "a Developer",
   "an Engineer",
@@ -20,27 +18,25 @@ setInterval(() => {
 
 setInterval(changeWord, 2000); // Change every 2 seconds
 
-// form validation
-
 const form = document.getElementById("form");
 const errorName = document.getElementById("error-name");
 const errorEmail = document.getElementById("error-email");
-const errorMessage = document.getElementById("error-message"); //selects element
+const errorMessage = document.getElementById("error-message");
 
 form.addEventListener("submit", (e) => {
   const name = document.getElementById("name");
   const email = document.getElementById("email");
   const message = document.getElementById("message");
 
-  if (name.value === "" || name.value === null) { //name validation
+  if (name.value === "" || name.value === null) {
     errorName.innerHTML = "Name must not be empty";
     e.preventDefault();
   }
-  if (email.value === "" || !email.value.includes("@")) { //email validation
+  if (email.value === "" || !email.value.includes("@")) {
     errorEmail.innerHTML = "Please provide a valid email address";
   }
   e.preventDefault();
-  if (message.value === "" || message.value.length > 100) { //message validation
+  if (message.value === "" || message.value.length > 100) {
     errorMessage.innerHTML = "Message must be greater than 100 chracters";
   }
   e.preventDefault();
@@ -63,9 +59,7 @@ closebtn.addEventListener("click", () => {
   icon2.style.display = "none";
   nav_menu.style.display = "none";
 });
-
-// Typing Effect
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", (event) => {
   const typing_name = document.querySelector("#typing_name");
   const name = " Marian.";
 
@@ -84,4 +78,4 @@ window.onload = () => {
   }
 
   typingEffect(typing_name, name);
-};
+});
