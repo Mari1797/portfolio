@@ -337,7 +337,7 @@ body {
   .error {
     min-height: 10px;
     color: #245f73;
-    font-size: 15px;
+    font-size: 3vw;
   }
 
   .footer {
