@@ -1,3 +1,5 @@
+// Alternating text
+
 const words = [
   "a Developer",
   "an Engineer",
@@ -15,6 +17,8 @@ setInterval(() => {
   }
   document.getElementById("moving-word").innerHTML = words[index];
 }, 2000);
+
+// form validation
 
 const form = document.getElementById("form");
 const errorName = document.getElementById("error-name");
@@ -57,6 +61,8 @@ closebtn.addEventListener("click", () => {
   icon2.style.display = "none";
   nav_menu.style.display = "none";
 });
+
+// Typing Effect
 
 const typing_name = document.getElementById("name_typing");
 const displayName = " Marian.";
