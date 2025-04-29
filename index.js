@@ -14,9 +14,7 @@ setInterval(() => {
     index = 0;
   }
   document.getElementById("moving-word").innerHTML = words[index];
-}, 2000); // change every 2 seconds
-
-setInterval(changeWord, 2000); // Change every 2 seconds
+}, 2000);
 
 const form = document.getElementById("form");
 const errorName = document.getElementById("error-name");
@@ -59,23 +57,24 @@ closebtn.addEventListener("click", () => {
   icon2.style.display = "none";
   nav_menu.style.display = "none";
 });
-window.addEventListener("DOMContentLoaded", (event) => {
-  const typing_name = document.querySelector("#typing_name");
-  const name = " Marian.";
 
-  function typingEffect(element, text, i = 0) {
-    if (i === 0) {
-      element.textContent = ""; // Clears content only at the beginning
-    }
+const typing_name = document.getElementById("name_typing");
+const displayName = " Marian.";
 
-    element.textContent += text[i];
-
-    if (i < text.length - 1) {
-      setTimeout(() => typingEffect(element, text, i + 1), 250);
-    } else {
-      setTimeout(() => typingEffect(element, text, 0), 1000); // Delay before starting again
-    }
+function typingEffect(element, text, i = 0) {
+  if (i === 0) {
+    element.textContent = ""; // Clear before starting typing
   }
 
-  typingEffect(typing_name, name);
-});
+  element.textContent += text[i];
+
+  if (i < text.length - 1) {
+    setTimeout(() => typingEffect(element, text, i + 1), 150);
+  } else {
+    setTimeout(() => {
+      typingEffect(element, text, 0); // Start again from beginning
+    }, 1000);
+  }
+}
+
+typingEffect(typing_name, displayName);

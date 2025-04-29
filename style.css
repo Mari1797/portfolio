@@ -10,7 +10,7 @@ body {
 
 @media only screen and (max-width: 680px) {
   /*mobile view */
-  mobile view body {
+  body {
     margin: 0px;
     padding: 0px;
     font-family: "Bitter", serif;
@@ -96,7 +96,7 @@ body {
     color: #245f73;
   }
 
-  #typing_name {
+  #name_typing {
     color: #245f73;
   }
 
@@ -414,7 +414,7 @@ body {
     font-family: "assistant", serif;
   }
 
-  #typing_name {
+  #name_typing {
     color: #245f73;
   }
 
